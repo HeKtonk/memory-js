@@ -1,5 +1,6 @@
 const imgBoard = document.getElementById("board");
-const gameOverMessage = document.getElementById("cover");
+const EndOfGame = document.getElementById("cover");
+
 
 // On creer un tableau contenant le chemin d'accès aux différentes images des légumes
 let imgLegumes = [
@@ -11,6 +12,10 @@ let imgLegumes = [
     "/resources/memory-legume/6.svg"
 ];
 //console.log(imgLegumes);
+// On double le tableau en ajoutant une copie des élémnts existant
+imgLegumes = imgLegumes.concat(imgLegumes);
+//console.log(imgLegumes);
+
 // Fontion pour mélanger les images
 function shuffleImg(imgTable) {
     // On itère dans le tableau donné en décrémentant jusqu'a atteidre 0
@@ -27,13 +32,19 @@ function shuffleImg(imgTable) {
 }
 shuffleImg(imgLegumes);
 //console.log(imgLegumes);
+
 // Variable qui déterminera si toute les cartes sont retournées
 let allRevealed = false;
-// Variable pour empêcher le joueur de retourner plus de carte que voulu
+// Variable pour empêcher le joueur de retourner une carte manuellement
 let clickBlocked = false;
-// détermine la première carte
+// Stock la première carte
 let firstImg;
-// contient le score en nombre de coup
+// Stock le score du joueur
 let score = 0;
-// 
+// Met tous les enfants de ma div avec l'id board dans allImg
 const allIgm = imgBoard.children;
+console.log(allIgm);
+
+function DiscoverImg(img){
+    card.classList.add("uncover")
+}
