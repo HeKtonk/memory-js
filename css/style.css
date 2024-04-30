@@ -1,0 +1,41 @@
+body {
+    background-color: chocolate;
+}
+
+.h1{
+    display:flex;
+    justify-content: center;
+}
+
+.navbar{
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+div[id^="navbar-"] a{
+    background-color: olive;
+    text-decoration: none;
+    padding: 0.5em;
+    color: rgb(87, 0, 128);
+    border-radius: 1em;
+    width: 6em;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 0.5em;
+}
+
+#board{
+    align-items: center;
+    background-color: transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 100rem;
+    position: relative;
+    width: 10rem;
+}
