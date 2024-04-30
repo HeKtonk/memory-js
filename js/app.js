@@ -34,7 +34,7 @@ shuffleImg(imgLegumes);
 //console.log(imgLegumes);
 
 // Variable qui déterminera si toute les cartes sont retournées
-let allRevealed = false;
+let isAllRevealed = false;
 // Variable pour empêcher le joueur de retourner une carte manuellement
 let clickBlocked = false;
 // Stock la première carte
@@ -45,6 +45,35 @@ let score = 0;
 const allIgm = imgBoard.children;
 console.log(allIgm);
 
-function DiscoverImg(img){
-    card.classList.add("uncover")
+// On détermine si toutes les cartes sont retournées
+function checkGameStatus() {
+    // on itère entre les balises contenues dans la div contenant le jeu
+    for (let i = allImg.length; i >0; i--) {
+        const image = allIgm[i];
+        // Si l'une d'elle contient la class untapped, alors c'est faux
+        if (!image.classList.contains("untapped")) {
+            isAllRevealed = false;
+            break;
+        // Sinon elles sont toute retournées et c'est vrai
+        } else {
+            isAllRevealed = true;
+        }
+    }
 }
+
+function createHtmlImg(image){
+    // On cree l'element div que l'on récupère dans htmlImg
+    const htmlImg = document.createElement("div");
+    // Ajoute une class à htmlImg
+    htmlImg.classList.add("???") // class a définir
+    // Insert la contenu html dans htmlImg
+    htmlImg.innerHTML = `<div class="">
+    <img src="${image}" alt="">
+    <div class="img-cover"<\div>
+    <\div>`;
+    // class img-cover à définir
+    return htmlImg;
+}
+
+// On cree chaque carte
+imgLegumes
