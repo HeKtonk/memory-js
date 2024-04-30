@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil Memory</title>
-    <style src="css/style.css" type="style"></style>
-    <script type="module" src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Memory Accueil</h1>
+    <h1 class="navbar">Memory Accueil</h1>
     <nav>
-       <div id="navbar-1">
+       <div id="navbar-1" class="navbar">
             <a href="index.html">Accueil</a>
             <a href="register.html">S'inscrire</a>
             <a href="connect.html">Se connecter</a>
@@ -18,18 +17,19 @@
             <a href="play.html">Jouer</a>
        </div>
     </nav>
-    <div>
+    <div id="accueil-li">
+        <h2><strong>Règle du jeu : </strong></h2>
         <ul>
             <li>Retournez deux cartes. Si les images sont identiques, le jeu laisse les cartes visibles.</li>
             <li>Si les images sont différentes, les cartes se retournent faces cachées là où elles étaient.</li>
             <li>La partie est terminée lorsque toutes les cartes ont été assemblées par paires.</li>
         </ul>
     </div>
-    <img src="resources/memory-legume/memory_detail.png" alt="Images du memory legume">
-    <div>
+    <img src="resources/memory-legume/memory_detail.png" alt="memory legume">
+    <div id="accueil-bottom">
         <p>Si vous voulez vous souvenir de votre score, inscrivez-vous via le formulaire.</p>
-        <p>Le jeu garde les 5 meilleurs scores</p>
-        <p>Si vous voulez remancer une partie cliquez sur la barre d'espace</p>
+        <p>Le jeu garde les <strong>5 meilleurs</strong> scores</p>
+        <p>Si vous voulez remancer une partie cliquez sur la <strong>barre d'espace</strong></p>
     </div>
 </body>
 </html>
