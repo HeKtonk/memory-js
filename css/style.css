@@ -26,6 +26,23 @@ div[id^="navbar-"] a{
     margin-right: 0.5em;
 }
 
+#register-form{
+    display: grid;
+    margin: 1em;
+    row-gap: 0.5em;
+
+}
+
+button{
+    background-color: olive;
+    border-color: olive;
+}
+
+input{
+    background-color: olive;
+    border-color: olive;
+}
+
 #board{
     align-items: center;
     background-color: transparent;
