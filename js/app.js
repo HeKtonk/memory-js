@@ -35,7 +35,7 @@ shuffleImg(imgLegumes);
 
 // Variable qui déterminera si toute les cartes sont retournées
 let isAllRevealed = false;
-// Variable pour empêcher le joueur de retourner une carte manuellement
+// Variable pour empêcher le joueur de retourner une carte si elle a etait retournée
 let clickBlocked = false;
 // Stock la première carte
 let firstImg;
@@ -66,7 +66,7 @@ function createHtmlImg(image){
     const htmlImg = document.createElement("div");
     // Ajoute une class à htmlImg
     htmlImg.classList.add("???") // class a définir
-    // Insert la contenu html dans htmlImg
+    // Insert le contenu html dans htmlImg
     htmlImg.innerHTML = `<div class="">
     <img src="${image}" alt="">
     <div class="img-cover"<\div>
@@ -76,4 +76,44 @@ function createHtmlImg(image){
 }
 
 // On cree chaque carte
-imgLegumes
+imgLegumes.forEach((image)=>{
+    // On cree un element html pour la première img et on l'insert dans imageBoard
+    const imageBoard = createHtmlImg(image);
+    // Dans l'element div récupéré au depart, on lui ajoute un enfant avec l'elemnt contenu dans imageBoard
+    imgBoard.appendChild(imageBoard);
+});
+// On ecoute le click sur la div de jeu
+imgBoard.addEventListener("click", (event) => {
+    // Si le click est bloqué, alors on sort de l'event
+    if (clickBlocked) {
+        return;
+    }
+    // On bloque le click sur cette image
+    clickBlocked = true;
+    // Si notre plateau d'image ne contient pas la class untapped alors on lui ajoute
+    if(!imgBoard.classList.contains("untapped")) {
+        imgBoard.classList.add("untapped");
+    }
+    // Si c'est la première carte
+    if (firstImg) {
+        // A comprendre
+        let currentImg = imgBoard.querySelector("class1 class2");
+    }
+    // Si les deux images ont la même source, alors on verifie si la partie est terminée et on rest les variables
+    if (currentImg.src === firstImg.src) {
+        checkGameStatus();
+        firstImg = null;
+        currentImg = null;
+    } else {
+        setTimeout(() => {
+            firstImg.parentNode.parentNode.classList.remove("untapped");
+            firstImg = null;
+            currentImg.parentNode.parentNode.classList.remove("untapped");
+            currentImg = null;
+        },3000);
+    }
+})
+
+// il y a une erreur ou tout doit etre dans le if d'un if else
+// lien
+// https://github.com/jhrick/memory-game-js-vanilla/blob/main/js/script.js
