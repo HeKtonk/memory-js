@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game page</title>
+    <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/app.js" defer></script>
 </head>
 <body>
-    <h1>Memory Jeu</h1>
+    <h1 class="h1">Memory Jeu</h1>
     <nav>
-        <div id="navbar-5">
+        <div id="navbar-5" class="navbar">
             <a href="index.html">Accueil</a>
             <a href="register.html">S'inscrire</a>
             <a href="connect.html">Se connecter</a>
@@ -18,8 +19,8 @@
         </div>
     </nav>
     <div>
-        <table>
-            <caption>Derniers Scores : </caption>
+        <table class="score">
+            <caption><b>Derniers Scores :</b></caption>
             <thead>
                 <td>Pseudo</td>
                 <td>Score</td>
@@ -27,49 +28,19 @@
                 <td>Memory</td>
                 <td>Date</td>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-            </tr>
+           
         </table>
-        <p>Tentez de gagner avec le moins d'essais possible.</p>
-        <p>Appuyez sur la barre d'espace pour relancer le jeu.</p>
-        <p>Nombre de coups : 0</p>
+        <div class="paragraphe">
+            <p>Tentez de gagner avec le moins d'essais possible.</p>
+            <p>Appuyez sur la barre d'espace pour relancer le jeu.</p>
+            <p>Nombre de coups : 0</p>
+        </div>
+
         <div name="board" id="board"></div>
-        <div>
+            <p>blbl</p>
+        <div class="bottom-play" id="cover">
             <div>Bien joué ! Veux-tu jouer à nouveau ?</div>
-            <div id="cover">
+            <div>
                 <button>Play Again</button>
             </div>
         </div>
