@@ -62,6 +62,7 @@ function flipCard() {
 function checkForMatch() {
     let isMatch = firstCard.dataset.legume === secondCard.dataset.legume;
     isMatch ? disableCards() : unFlipCards();
+    isWin(pair);
 }
 
 function disableCards() {
@@ -80,7 +81,6 @@ function unFlipCards() {
         resetBoard();
         nbError++;
         console.log(nbError + " nombre d'erreur");
-        
     }, 1500);
 }
 
@@ -93,4 +93,11 @@ restartGameBtn.addEventListener("click", () => {
   location.reload();
 });
 
+function isWin(pair) {
+    if (pair === 6) {
+        setTimeout(() => {
+            alert("Tu as découvert toutes les paires !");
+        }, 1500);
+    }
+}
 
