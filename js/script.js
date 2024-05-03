@@ -8,12 +8,12 @@ let pair = 0;
 let nbError = 0;
 
 let imgLegumes = [
-    "/resources/memory-legume/1.svg",
-    "/resources/memory-legume/2.svg",
-    "/resources/memory-legume/3.svg",
-    "/resources/memory-legume/4.svg",
-    "/resources/memory-legume/5.svg",
-    "/resources/memory-legume/6.svg"
+    "/memory-js/resources/memory-legume/1.svg",
+    "/memory-js/resources/memory-legume/2.svg",
+    "/memory-js/resources/memory-legume/3.svg",
+    "/memory-js/resources/memory-legume/4.svg",
+    "/memory-js/resources/memory-legume/5.svg",
+    "/memory-js/resources/memory-legume/6.svg"
 ];
 
 imgLegumes = imgLegumes.concat(imgLegumes);
@@ -32,7 +32,7 @@ function createHtmlImg(image){
     htmlImg.className = "memory-card";
     htmlImg.dataset.legume = `${image}`;
     htmlImg.innerHTML = `<img src="${image}" alt="Loading..." class="front-face"/>
-    <img src="/resources/logo-javascript.svg" alt="Loading..." class="back-face"/>`
+    <img src="/memory-js/resources/logo-javascript.svg" alt="Loading..." class="back-face"/>`
     return htmlImg;
 }
 
