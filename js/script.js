@@ -90,14 +90,10 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-restartGameBtn.addEventListener("click", () => {
-  location.reload();
-});
-
 function isWin(pair) {
     if (pair === 6) {
         setTimeout(() => {
-            alert("Tu as découvert toutes les paires !");
+            alert("Tu as découvert toutes les paires ! Press spacebar pour recommencer.");
         }, 1500);
     }
 }
@@ -110,4 +106,10 @@ function displayNbError() {
 function displayScore() {
     const error = document.getElementById("displayError");
     error.textContent = error.textContent + " et " + pair + " paire(s) trouvée(s) !";
+}
+
+document.body.onkeyup = function (e) {
+    if (e.keyCode === 32 || e.key === ' ' || e.key === 'Spacebar') {
+        location.reload();
+    }
 }
