@@ -6,6 +6,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 let pair = 0;
 let nbError = 0;
+displayNbError();
 
 let imgLegumes = [
     "/resources/memory-legume/1.svg",
@@ -70,7 +71,7 @@ function disableCards() {
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
     pair++;
-    console.log(pair + " paires trouvées");
+    displayScore();
 }
 
 function unFlipCards() {
@@ -80,7 +81,7 @@ function unFlipCards() {
         secondCard.classList.remove('flip');
         resetBoard();
         nbError++;
-        console.log(nbError + " nombre d'erreur");
+        displayNbError();
     }, 1500);
 }
 
@@ -101,3 +102,12 @@ function isWin(pair) {
     }
 }
 
+function displayNbError() {
+    const error = document.getElementById("displayError");
+    error.textContent = nbError + " coup(s) effectué(s)"
+}
+
+function displayScore() {
+    const error = document.getElementById("displayError");
+    error.textContent = error.textContent + " et " + pair + " paire(s) trouvée(s) !";
+}
