@@ -18,16 +18,22 @@
         </div>
     </nav>
     <form>
-        <label for="">Nom d'utilisateur</label>
-        <input type="text">
-        <label for="">Email</label>
-        <input type="text">
-        <label for="">Choix du Memory</label>
-        <select name="" id="">
-            <option value="">Légumes</option>
-            <option value="">Chiens</option>
-            <option value="">Dinosaures</option>
+        <div>
+        <label for="text">Nom d'utilisateur</label>
+        <input type="text" name="text">
+        </div>
+        <div>
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        </div>
+        <div>
+        <label for="choice">Choix du Memory</label>
+        <select name="choice">
+            <option value="Veg">Légumes</option>
+            <option value="Dog">Chiens</option>
+            <option value="Dino">Dinosaures</option>
         </select>
+        </div>
         <div hidden id="legume-img">
             <img src="/resources/memory-legume/memory_detail.png" alt="Légumes">
         </div>
@@ -37,12 +43,14 @@
        <div hidden id="dino-img">
         <img src="/resources/dinosaures/memory_detail_dinosaures.png" alt="Dinosaures">
        </div>
+       <div>
         <label for="">Taille du Memory</label>
         <select name="" id="">
             <option value="small">2*5</option>
             <option value="medium">3*4</option>
             <option value="large">4*6</option>
         </select>
+        </div>
         <button>Enregistrer</button>
     </form>
     <table>
@@ -54,41 +62,6 @@
             <td>Memory</td>
             <td>Date</td>
         </thead>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
     </table>
 </body>
 </html>
