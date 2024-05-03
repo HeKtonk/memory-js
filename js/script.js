@@ -68,7 +68,8 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
-    nbError++;
+    pair++;
+    console.log(pair + " paires trouvées");
 }
 
 function unFlipCards() {
@@ -77,7 +78,9 @@ function unFlipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetBoard();
-        pair++;
+        nbError++;
+        console.log(nbError + " nombre d'erreur");
+        
     }, 1500);
 }
 
@@ -89,3 +92,5 @@ function resetBoard() {
 restartGameBtn.addEventListener("click", () => {
   location.reload();
 });
+
+
