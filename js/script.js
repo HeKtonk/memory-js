@@ -9,12 +9,12 @@ let nbError = 0;
 displayNbError();
 
 let imgLegumes = [
-    "/resources/memory-legume/1.svg",
-    "/resources/memory-legume/2.svg",
-    "/resources/memory-legume/3.svg",
-    "/resources/memory-legume/4.svg",
-    "/resources/memory-legume/5.svg",
-    "/resources/memory-legume/6.svg"
+    "resources/memory-legume/1.svg",
+    "resources/memory-legume/2.svg",
+    "resources/memory-legume/3.svg",
+    "resources/memory-legume/4.svg",
+    "resources/memory-legume/5.svg",
+    "resources/memory-legume/6.svg"
 ];
 
 imgLegumes = imgLegumes.concat(imgLegumes);
